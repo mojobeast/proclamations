@@ -12,8 +12,12 @@ data modify storage mojotitles:temp WIPBanner.triggers set value \
 data modify storage mojotitles:temp WIPBanner.players set value \
     [{"type": "mojotitles:triggering_player"}]
 
+function mojotitles:ui/get_default_banner_color
+
 data modify storage mojotitles:temp WIPBanner.title_text_components set value \
-    [{"type": "mojotitles:banner_name", "color": "yellow"}]
+    [{"type": "mojotitles:banner_name"}]
+data modify storage mojotitles:temp WIPBanner.title_text_components[-1].color \
+    set from storage mojotitles:temp DefaultBannerColor
 
 data modify storage mojotitles:temp WIPBanner.subtitle_text_components set value []
 data modify storage mojotitles:temp WIPBanner.actionbar_text_components set value []
