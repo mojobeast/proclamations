@@ -1,0 +1,9 @@
+execute unless data storage mojotitles:temp Players[0] run return fail
+
+data modify storage mojotitles:temp Player set from storage mojotitles:temp Players[0]
+data remove storage mojotitles:temp Players[0]
+
+execute if data storage mojotitles:temp Player{type:"mojotitles:triggering_player"} \
+    run tag @a[tag=mojotitles.player_detector.detected] add mojotitles.players.sees_title
+
+function mojotitles:players/tag_loop

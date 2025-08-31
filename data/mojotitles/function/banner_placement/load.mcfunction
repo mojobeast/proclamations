@@ -1,0 +1,1 @@
+scoreboard objectives add mojotitles.banner_placement.mined_white_banner minecraft.mined:minecraft.white_banner

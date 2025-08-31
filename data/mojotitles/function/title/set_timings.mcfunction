@@ -1,0 +1,1 @@
+$title @a[tag=mojotitles.players.sees_title] times $(fade_in) $(stay) $(fade_out)

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Mojo's Dynamic Titles",
+  "actions": [
+    {
+      "label": "Configure Banner",
+      "action": {
+        "type": "run_command",
+        "command": "trigger mojotitles.configure"
+      }
+    }
+  ]
+}
