@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "banner",
+  "key": {
+    "A": "minecraft:cyan_wool",
+    "B": "minecraft:stick"
+  },
+  "pattern": ["AAA", "AAA", " B "],
+  "result": {
+    "id": "minecraft:cyan_banner",
+    "components": {
+      "minecraft:enchantable": {
+        "value": 30
+      }
+    },
+    "count": 1
+  }
+}
