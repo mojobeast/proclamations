@@ -14,12 +14,16 @@ data modify storage mojotitles:temp WIPBanner.players set value \
 
 function mojotitles:ui/get_default_banner_color
 
+# default_color is used if not overridden by a text component we get from elsewhere (e.g. custom name or lore)
+
 data modify storage mojotitles:temp WIPBanner.title_text_components set value \
     [{"type": "mojotitles:banner_name"}]
-data modify storage mojotitles:temp WIPBanner.title_text_components[-1].color \
+data modify storage mojotitles:temp WIPBanner.title_text_components[-1].default_color \
     set from storage mojotitles:temp DefaultBannerColor
 
-data modify storage mojotitles:temp WIPBanner.subtitle_text_components set value []
+data modify storage mojotitles:temp WIPBanner.subtitle_text_components set value \
+    [{"type": "mojotitles:banner_lore", "default_color": "white"}]
+
 data modify storage mojotitles:temp WIPBanner.actionbar_text_components set value []
 
 data modify storage mojotitles:temp WIPBanner.times.fade_in set value 10
