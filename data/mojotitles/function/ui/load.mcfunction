@@ -1,1 +1,0 @@
-scoreboard objectives add mojotitles.configure trigger

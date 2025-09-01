@@ -1,8 +1,4 @@
-execute unless items entity @s weapon.mainhand #minecraft:banners \
-    run return \
-    run tellraw @s {"text":"Item in main hand is not a banner.","color":"red"}
-
-# For now, only this default profile is supported
+execute unless block ~ ~ ~ minecraft:lodestone run return run kill @s
 
 data modify storage mojotitles:temp WIPBanner set value {"enabled": true}
 
@@ -12,7 +8,7 @@ data modify storage mojotitles:temp WIPBanner.triggers set value \
 data modify storage mojotitles:temp WIPBanner.players set value \
     [{"type": "mojotitles:triggering_player"}]
 
-function mojotitles:ui/get_default_banner_color
+execute at @s run function mojotitles:banner_placement/get_default_banner_color
 
 # default_color is used if not overridden by a text component we get from elsewhere (e.g. custom name or lore)
 
@@ -30,4 +26,13 @@ data modify storage mojotitles:temp WIPBanner.times.fade_in set value 10
 data modify storage mojotitles:temp WIPBanner.times.stay set value 70
 data modify storage mojotitles:temp WIPBanner.times.fade_out set value 20
 
-item modify entity @s weapon.mainhand mojotitles:save_wip_banner
+tag @s remove mojotitles.newly_summoned_marker
+
+execute at @s run data modify block ~ ~ ~ components."minecraft:custom_data".mojotitles \
+    set from storage mojotitles:temp WIPBanner
+
+execute at @s run data modify entity @s data set from block ~ ~ ~ components."minecraft:custom_data"
+
+data modify entity @s data.name set value "Mojo's Dynamic Titles"
+
+function mojotitles:triggers/init
