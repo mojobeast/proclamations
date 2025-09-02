@@ -3,7 +3,8 @@
 # TODO: Summon interaction entity to bring up configuration dialog
 
 execute align xyz \
-    run summon minecraft:marker ~0.5 ~0.5 ~0.5 {Tags:["mojotitles.newly_summoned_marker"]}
+    run summon minecraft:marker ~0.5 ~0.5 ~0.5 \
+    {Tags:["mojotitles.banner_marker","mojotitles.newly_summoned_marker"], data: {name: "Mojo's Dynamic Titles"}}
 
 execute if block ~ ~ ~ #minecraft:banners[facing=west] \
     align xyz positioned ~1 ~ ~ \

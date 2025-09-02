@@ -1,4 +1,4 @@
-execute unless block ~ ~ ~ minecraft:lodestone run return run kill @s
+execute unless block ~ ~ ~ minecraft:lodestone run return fail
 
 data modify storage mojotitles:temp WIPBanner set value {"enabled": true}
 
@@ -32,7 +32,5 @@ execute at @s run data modify block ~ ~ ~ components."minecraft:custom_data".moj
     set from storage mojotitles:temp WIPBanner
 
 execute at @s run data modify entity @s data set from block ~ ~ ~ components."minecraft:custom_data"
-
-data modify entity @s data.name set value "Mojo's Dynamic Titles"
 
 function mojotitles:triggers/init

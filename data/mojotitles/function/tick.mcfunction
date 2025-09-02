@@ -1,1 +1,1 @@
-function mojotitles:player_detector/tick
+execute as @e[tag=mojotitles.banner_marker] run function mojotitles:marker/tick
