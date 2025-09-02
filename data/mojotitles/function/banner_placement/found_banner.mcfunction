@@ -4,6 +4,10 @@
 
 tag @s remove mojotitles.newly_summoned_marker
 
+data modify entity @s data.mojotitles merge from block ~ ~ ~ components."minecraft:custom_data".mojotitles
+data modify entity @s data.mojotitles.triggers set value []
+data modify entity @s data.mojotitles.lore set from block ~ ~ ~ components."minecraft:lore"
+
 execute if block ~ ~ ~ #minecraft:banners[facing=west] \
     align xyz positioned ~1 ~ ~ \
     run return \

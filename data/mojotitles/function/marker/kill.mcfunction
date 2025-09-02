@@ -26,6 +26,9 @@ data modify entity @e[tag=mojotitles.nearest_banner_item,limit=1] \
 data modify entity @e[tag=mojotitles.nearest_banner_item,limit=1] \
     Item.components."minecraft:custom_data" set from entity @s data
 
+data modify entity @e[tag=mojotitles.nearest_banner_item,limit=1] \
+    Item.components."minecraft:lore" set from entity @s data.mojotitles.lore
+
 tag @e[tag=mojotitles.nearest_banner_item] remove mojotitles.nearest_banner_item
 
 kill @s
