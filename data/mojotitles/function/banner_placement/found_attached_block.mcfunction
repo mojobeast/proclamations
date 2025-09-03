@@ -18,7 +18,7 @@ data modify entity @s data.mojotitles.attached_block.type set value "minecraft:l
 data modify storage mojotitles:temp WIPBanner set value {"enabled": true}
 
 data modify storage mojotitles:temp WIPBanner.triggers set value \
-    [{"type": "mojotitles:player_enters_range", "distance": 16, "cooldown_ticks": 100}]
+    [{"type": "mojotitles:player_enters_range", "distance": 64, "cooldown_ticks": 100}]
 
 data modify storage mojotitles:temp WIPBanner.players set value \
     [{"type": "mojotitles:triggering_player"}]
