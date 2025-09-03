@@ -1,6 +1,3 @@
-# kill marker if banner was broken
-execute at @s unless block ~ ~ ~ #minecraft:banners run return run kill @s
-
 execute store result score #cooldown_threshold mojotitles.last_seen_by_player_detector \
     run time query gametime
 
