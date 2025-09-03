@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "lore": [
+    {
+      "nbt": "data.mojotitles.lore[0]",
+      "entity": "@s",
+      "source": "entity",
+      "type": "nbt"
+    }
+  ],
+  "mode": "replace_all",
+  "conditions": []
+}

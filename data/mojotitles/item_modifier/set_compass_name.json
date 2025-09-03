@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "nbt": "CustomName",
+      "block": "~ ~ ~",
+      "source": "block",
+      "type": "nbt",
+      "interpret": true
+    },
+    "conditions": []
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [],
+    "mode": "replace_all",
+    "conditions": []
+  }
+]

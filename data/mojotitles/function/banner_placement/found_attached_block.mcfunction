@@ -1,4 +1,19 @@
+execute align xyz run summon minecraft:marker ~ ~ ~ {Tags:["mojotitles.attached_block"]}
+
+execute store result entity @s data.mojotitles.attached_block.x int 1 \
+    run data get entity @e[tag=mojotitles.attached_block,limit=1] Pos[0]
+
+execute store result entity @s data.mojotitles.attached_block.y int 1 \
+    run data get entity @e[tag=mojotitles.attached_block,limit=1] Pos[1]
+
+execute store result entity @s data.mojotitles.attached_block.z int 1 \
+    run data get entity @e[tag=mojotitles.attached_block,limit=1] Pos[2]
+
+kill @e[tag=mojotitles.attached_block]
+
 execute unless block ~ ~ ~ minecraft:lodestone run return fail
+
+data modify entity @s data.mojotitles.attached_block.type set value "minecraft:lodestone"
 
 data modify storage mojotitles:temp WIPBanner set value {"enabled": true}
 
