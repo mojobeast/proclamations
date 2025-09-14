@@ -1,1 +1,3 @@
-execute as @e[tag=mojotitles.banner_marker] run function mojotitles:marker/tick
+execute as @e[type=minecraft:marker,tag=mojotitles.banner] run function mojotitles:marker/tick
+
+function mojotitles:ui/tick
