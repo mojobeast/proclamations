@@ -12,3 +12,5 @@ execute \
 tag @s remove mojotitles.player_checking_target
 
 scoreboard players reset @a mojotitles.ui.player_detection_distance
+
+function mojotitles:ui/clear_interaction_target

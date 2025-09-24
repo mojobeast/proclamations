@@ -27,6 +27,10 @@ data modify storage mojotitles:dialog dialog set value {\
     label: "Confirm"\
   },\
   no: {\
+    action: {\
+      type: "run_command",\
+      command: "trigger mojotitles.ui.cancel"\
+    },\
     label: "Cancel"\
   }\
 }
