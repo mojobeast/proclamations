@@ -1,10 +1,10 @@
-$execute store result score @s mojotitles.last_seen_by_player_detector \
-    run data get entity @e[tag=mojotitles.active_marker,limit=1] \
-    data.mojotitles.last_saw_players."$(UUID)"
+$execute store result score #cooldown_threshold mojotitles.player_detector_times.$(id) \
+    run time query gametime
 
-execute if score @s mojotitles.last_seen_by_player_detector < #cooldown_threshold mojotitles.last_seen_by_player_detector \
+$scoreboard players remove #cooldown_threshold mojotitles.player_detector_times.$(id) $(cooldown_ticks)
+
+$execute unless score @s mojotitles.player_detector_times.$(id) > #cooldown_threshold mojotitles.player_detector_times.$(id) \
     run function mojotitles:player_detector/detected_player
 
-$execute store result entity @e[tag=mojotitles.active_marker,limit=1] \
-    data.mojotitles.last_saw_players."$(UUID)" int 1 \
+$execute store result score @s mojotitles.player_detector_times.$(id) \
     run time query gametime

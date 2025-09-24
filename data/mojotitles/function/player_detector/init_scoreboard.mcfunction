@@ -1,0 +1,1 @@
+$scoreboard objectives add mojotitles.player_detector_times.$(id) dummy
