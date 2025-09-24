@@ -1,1 +1,2 @@
+scoreboard objectives add mojotitles.player_detectors dummy
 scoreboard objectives add mojotitles.last_seen_by_player_detector dummy
