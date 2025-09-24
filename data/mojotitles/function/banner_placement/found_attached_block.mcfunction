@@ -41,9 +41,16 @@ data modify storage mojotitles:temp WIPBanner.times.fade_in set value 10
 data modify storage mojotitles:temp WIPBanner.times.stay set value 70
 data modify storage mojotitles:temp WIPBanner.times.fade_out set value 20
 
-execute at @s run data modify block ~ ~ ~ components."minecraft:custom_data".mojotitles \
-    set from storage mojotitles:temp WIPBanner
+execute at @s run \
+    data modify storage mojotitles:temp WIPBanner \
+        merge from block ~ ~ ~ components."minecraft:custom_data".mojotitles
 
-execute at @s run data modify entity @s data merge from block ~ ~ ~ components."minecraft:custom_data"
+execute at @s run \
+    data modify block ~ ~ ~ components."minecraft:custom_data".mojotitles \
+        set from storage mojotitles:temp WIPBanner
+
+execute at @s run \
+    data modify entity @s data \
+        merge from block ~ ~ ~ components."minecraft:custom_data"
 
 function mojotitles:triggers/init
