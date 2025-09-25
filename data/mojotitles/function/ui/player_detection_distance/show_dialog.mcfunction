@@ -4,7 +4,7 @@ data modify storage mojotitles:dialog dialog set value {\
   type: "minecraft:confirmation",\
   title: "Banner Settings",\
   pause: 0,\
-  after_action: "close",\
+  after_action: "none",\
   body: {\
     type: "minecraft:plain_message",\
     contents: "Detect players within this distance"\
@@ -29,7 +29,7 @@ data modify storage mojotitles:dialog dialog set value {\
   no: {\
     action: {\
       type: "run_command",\
-      command: "trigger mojotitles.ui.cancel"\
+      command: "trigger mojotitles.ui.action set 2"\
     },\
     label: "Cancel"\
   }\

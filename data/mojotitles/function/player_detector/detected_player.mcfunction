@@ -1,3 +1,3 @@
-tag @s add mojotitles.player_detector.detected
+tag @s add mojotitles.triggering_player
 function mojotitles:title/show
-tag @s remove mojotitles.player_detector.detected
+tag @s remove mojotitles.triggering_player
