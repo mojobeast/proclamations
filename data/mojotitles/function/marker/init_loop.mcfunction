@@ -4,6 +4,9 @@ data modify storage mojotitles:temp Trigger set from storage mojotitles:temp Tri
 data remove storage mojotitles:temp Triggers[0]
 
 execute if data storage mojotitles:temp Trigger{type:"mojotitles:player_enters_range"} \
-    run function mojotitles:player_detector/init
+    run function mojotitles:marker/player_detector/init
 
-function mojotitles:triggers/init_loop
+execute if data storage mojotitles:temp Trigger{type:"mojotitles:shulker_enters_inventory"} \
+    run function mojotitles:marker/inventory_detector/init
+
+function mojotitles:marker/init_loop

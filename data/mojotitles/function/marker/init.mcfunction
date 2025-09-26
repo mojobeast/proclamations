@@ -1,2 +1,2 @@
 data modify storage mojotitles:temp Triggers set from entity @s data.mojotitles.triggers
-function mojotitles:triggers/init_loop
+function mojotitles:marker/init_loop

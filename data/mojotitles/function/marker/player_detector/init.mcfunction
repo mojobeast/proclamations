@@ -6,5 +6,5 @@ execute store result score @s mojotitles.player_detectors \
 execute store result storage mojotitles:temp player_detector_scoreboard.id int 1 \
     run scoreboard players get @s mojotitles.player_detectors
 
-function mojotitles:player_detector/init_scoreboard \
+function mojotitles:marker/player_detector/init_scoreboard \
     with storage mojotitles:temp player_detector_scoreboard
