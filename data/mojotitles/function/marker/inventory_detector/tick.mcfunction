@@ -16,3 +16,5 @@ data modify storage mojotitles:temp ContainerActionbarTextComponents set value [
 function mojotitles:marker/inventory_detector/loop_container_contents
 
 function mojotitles:title/show
+
+tag @a[tag=mojotitles.triggering_player] remove mojotitles.triggering_player
