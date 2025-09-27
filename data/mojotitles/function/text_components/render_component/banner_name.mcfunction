@@ -1,9 +1,9 @@
-# try: assume lore is compount NBT text component, merge all keys
+# try: assume custom name is compound NBT text component, merge all keys
 execute store result score #success_count mojotitles.temp as @e[tag=mojotitles.active_marker,limit=1] at @s \
     run data modify storage mojotitles:temp RenderedTextComponent \
         merge from block ~ ~ ~ CustomName
 
-# catch: on failure, assume lore is simple string
+# catch: on failure, assume custom name is simple string
 execute if score #success_count mojotitles.temp matches 0 as @e[tag=mojotitles.active_marker,limit=1] at @s \
     run data modify storage mojotitles:temp RenderedTextComponent.text \
         set from block ~ ~ ~ CustomName

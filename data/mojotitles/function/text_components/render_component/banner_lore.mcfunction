@@ -1,4 +1,4 @@
-# try: assume lore is compount NBT text component, merge all keys
+# try: assume lore is compound NBT text component, merge all keys
 execute store result score #success_count mojotitles.temp as @e[tag=mojotitles.active_marker,limit=1] at @s \
     run data modify storage mojotitles:temp RenderedTextComponent \
         merge from block ~ ~ ~ components."minecraft:lore"[0]
