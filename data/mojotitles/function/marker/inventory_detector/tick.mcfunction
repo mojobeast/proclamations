@@ -9,8 +9,9 @@ execute unless data entity @s data.mojotitles.container_inventory[{components:{"
 data modify storage mojotitles:temp DetectedInventoryContents set from entity @s \
      data.mojotitles.container_inventory[{components:{"minecraft:container":[{}]}}].components."minecraft:container"
 
-data modify storage mojotitles:temp ShulkerTitleComponents set value []
-data modify storage mojotitles:temp ShulkerSubtitleComponents set value []
+data modify storage mojotitles:temp ContainerTitleTextComponents set value []
+data modify storage mojotitles:temp ContainerSubtitleTextComponents set value []
+data modify storage mojotitles:temp ContainerActionbarTextComponents set value []
 
 function mojotitles:marker/inventory_detector/loop_container_contents
 

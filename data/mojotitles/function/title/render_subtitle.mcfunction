@@ -3,6 +3,6 @@ data modify storage mojotitles:temp TextComponents \
 
 function mojotitles:text_components/render
 
-execute if data storage mojotitles:temp RenderedTextComponents[0] \
+execute if data storage mojotitles:temp RenderedTextComponents[{}] \
     run title @a[tag=mojotitles.players.sees_title] subtitle \
         {type:"nbt", source:"storage", storage:"mojotitles:temp", nbt:"RenderedTextComponents", interpret:true}

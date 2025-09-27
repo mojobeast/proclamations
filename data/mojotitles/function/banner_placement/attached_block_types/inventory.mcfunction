@@ -7,9 +7,12 @@ data modify storage mojotitles:temp WIPBanner.players append value \
     {"type": "mojotitles:triggering_player"}
 
 data modify storage mojotitles:temp WIPBanner.title_text_components append value \
-    {"type": "mojotitles:shulker_contents"}
+    {"type": "mojotitles:container_title_text_components"}
 data modify storage mojotitles:temp WIPBanner.title_text_components[-1].default_color \
     set from storage mojotitles:temp DefaultBannerColor
 
 data modify storage mojotitles:temp WIPBanner.subtitle_text_components append value \
-    {"type": "mojotitles:shulker_contents_lore", "default_color": "white"}
+    {"type": "mojotitles:container_subtitle_text_components", "default_color": "white"}
+
+data modify storage mojotitles:temp WIPBanner.actionbar_text_components append value \
+    {"type": "mojotitles:container_actionbar_text_components", "default_color": "white"}
