@@ -5,8 +5,7 @@ data remove storage mojotitles:temp DetectedInventoryContents[0]
 
 # If Item has custom name: add name to the title
 execute if data storage mojotitles:temp Item.item.components."minecraft:custom_name" \
-    run data modify storage mojotitles:temp ShulkerTitleComponents \
-        append from storage mojotitles:temp Item.item.components."minecraft:custom_name"
+    run function mojotitles:marker/inventory_detector/add_custom_name
 
 # AND if Item has custom lore: add lore to the subtitle
 # AND if Item has a custom model texture: display the item
