@@ -1,5 +1,5 @@
 data modify storage mojotitles:temp TextComponents \
-    set from entity @e[tag=mojotitles.active_marker,limit=1] data.mojotitles.title_text_components
+    set from entity @e[type=minecraft:marker,tag=mojotitles.active_marker,limit=1] data.mojotitles.title_text_components
 
 function mojotitles:text_components/render
 

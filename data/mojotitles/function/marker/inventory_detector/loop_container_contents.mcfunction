@@ -3,6 +3,13 @@ execute unless data storage mojotitles:temp DetectedInventoryContents[0] run ret
 data modify storage mojotitles:temp Item set from storage mojotitles:temp DetectedInventoryContents[0]
 data remove storage mojotitles:temp DetectedInventoryContents[0]
 
-# TODO: Process mojotitles:temp Item
+# If Item has custom name: add name to the title
+execute if data storage mojotitles:temp Item.item.components."minecraft:custom_name" \
+    run data modify storage mojotitles:temp ShulkerTitleComponents \
+        append from storage mojotitles:temp Item.item.components."minecraft:custom_name"
+
+# AND if Item has custom lore: add lore to the subtitle
+# AND if Item has a custom model texture: display the item
+# AND if Item is in a stack: display the count of items the stack (if item was displayed, also add "x" e.g. "x10")
 
 function mojotitles:marker/inventory_detector/loop_container_contents

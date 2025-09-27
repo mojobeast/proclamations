@@ -1,6 +1,17 @@
-$execute unless data block $(x) $(y) $(z) Items[{components:{"minecraft:container":[{}]}}] run return fail
+$execute store success score #title_text_changed mojotitles.temp \
+    run data modify entity @s data.mojotitles.container_inventory \
+        set from block $(x) $(y) $(z) Items
 
-$data modify storage mojotitles:temp DetectedInventoryContents set from block $(x) $(y) $(z) \
-     Items[{components:{"minecraft:container":[{}]}}].components."minecraft:container"
+execute if score #title_text_changed mojotitles.temp matches 0 run return fail
+
+execute unless data entity @s data.mojotitles.container_inventory[{components:{"minecraft:container":[{}]}}] run return fail
+
+data modify storage mojotitles:temp DetectedInventoryContents set from entity @s \
+     data.mojotitles.container_inventory[{components:{"minecraft:container":[{}]}}].components."minecraft:container"
+
+data modify storage mojotitles:temp ShulkerTitleComponents set value []
+data modify storage mojotitles:temp ShulkerSubtitleComponents set value []
 
 function mojotitles:marker/inventory_detector/loop_container_contents
+
+function mojotitles:title/show
