@@ -1,0 +1,1 @@
+$title @a[tag=proclamations.players.sees_title] times $(fade_in) $(stay) $(fade_out)

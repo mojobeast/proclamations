@@ -1,0 +1,1 @@
+$scoreboard objectives add proclamations.player_detector_times.$(id) dummy

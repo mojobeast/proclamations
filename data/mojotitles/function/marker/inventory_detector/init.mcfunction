@@ -1,1 +1,0 @@
-tag @s add mojotitles.inventory_detector
