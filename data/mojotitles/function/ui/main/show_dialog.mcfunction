@@ -22,7 +22,10 @@ data modify storage mojotitles:dialog dialog set value {\
     actions: []\
 }
 
-function mojotitles:ui/main/components/player_detection_range
+# TODO: Display which triggers the banner is currently configured for in the body
+
+execute if data storage mojotitles:temp current_marker_data.triggers[{type:"mojotitles:player_enters_range"}] \
+    run function mojotitles:ui/main/components/player_detection_range
 
 function mojotitles:ui/main/components/triggering_player
 
