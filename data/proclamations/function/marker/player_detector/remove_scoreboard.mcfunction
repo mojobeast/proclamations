@@ -1,1 +1,1 @@
-$scoreboard objectives remove mojotitles.player_detector_times.$(id)
+$scoreboard objectives remove proclamations.player_detector_times.$(id)

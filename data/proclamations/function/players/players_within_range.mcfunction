@@ -1,2 +1,2 @@
-$execute at @e[type=minecraft:marker,tag=mojotitles.active_marker] \
-    run tag @a[distance=..$(distance)] add mojotitles.players.sees_title
+$execute at @e[type=minecraft:marker,tag=proclamations.active_marker] \
+    run tag @a[distance=..$(distance)] add proclamations.players.sees_title

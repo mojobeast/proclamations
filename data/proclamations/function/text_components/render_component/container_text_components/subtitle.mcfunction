@@ -1,4 +1,4 @@
-data modify storage mojotitles:temp ContainerTextComponents \
-    set from storage mojotitles:temp ContainerSubtitleTextComponents
+data modify storage proclamations:temp ContainerTextComponents \
+    set from storage proclamations:temp ContainerSubtitleTextComponents
 
-function mojotitles:text_components/render_component/container_text_components/loop
+function proclamations:text_components/render_component/container_text_components/loop

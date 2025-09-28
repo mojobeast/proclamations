@@ -5,12 +5,12 @@
       "conditions": {
         "entity": {
           "type": "minecraft:interaction",
-          "nbt": "{Tags:[\"mojotitles.banner\"]}"
+          "nbt": "{Tags:[\"proclamations.banner\"]}"
         }
       }
     }
   },
   "rewards": {
-    "function": "mojotitles:ui/interact"
+    "function": "proclamations:ui/interact"
   }
 }

@@ -1,21 +1,21 @@
-execute unless data storage mojotitles:temp ContainerTextComponents[0] run return fail
+execute unless data storage proclamations:temp ContainerTextComponents[0] run return fail
 
-data modify storage mojotitles:temp RenderedContainerTextComponent set from storage mojotitles:temp ContainerTextComponents[0]
-data remove storage mojotitles:temp ContainerTextComponents[0]
+data modify storage proclamations:temp RenderedContainerTextComponent set from storage proclamations:temp ContainerTextComponents[0]
+data remove storage proclamations:temp ContainerTextComponents[0]
         
-execute unless data storage mojotitles:temp RenderedContainerTextComponent.color \
-    run execute if data storage mojotitles:temp RenderedContainerTextComponent.default_color \
-        run data modify storage mojotitles:temp RenderedContainerTextComponent.color \
-            set from storage mojotitles:temp RenderedContainerTextComponent.default_color
+execute unless data storage proclamations:temp RenderedContainerTextComponent.color \
+    run execute if data storage proclamations:temp RenderedContainerTextComponent.default_color \
+        run data modify storage proclamations:temp RenderedContainerTextComponent.color \
+            set from storage proclamations:temp RenderedContainerTextComponent.default_color
         
-execute unless data storage mojotitles:temp RenderedContainerTextComponent.color \
-    run data modify storage mojotitles:temp RenderedContainerTextComponent.color \
-        set from storage mojotitles:temp TextComponent.default_color
+execute unless data storage proclamations:temp RenderedContainerTextComponent.color \
+    run data modify storage proclamations:temp RenderedContainerTextComponent.color \
+        set from storage proclamations:temp TextComponent.default_color
 
-data remove storage mojotitles:temp RenderedContainerTextComponent.default_color
+data remove storage proclamations:temp RenderedContainerTextComponent.default_color
 
-data modify storage mojotitles:temp RenderedTextComponents append from storage mojotitles:temp RenderedContainerTextComponent
+data modify storage proclamations:temp RenderedTextComponents append from storage proclamations:temp RenderedContainerTextComponent
 
-data remove storage mojotitles:temp RenderedContainerTextComponent
+data remove storage proclamations:temp RenderedContainerTextComponent
 
-function mojotitles:text_components/render_component/container_text_components/loop
+function proclamations:text_components/render_component/container_text_components/loop

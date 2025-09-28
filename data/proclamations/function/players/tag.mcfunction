@@ -1,4 +1,4 @@
-data modify storage mojotitles:temp Players \
-    set from entity @e[tag=mojotitles.active_marker,limit=1] data.mojotitles.players
+data modify storage proclamations:temp Players \
+    set from entity @e[tag=proclamations.active_marker,limit=1] data.proclamations.players
 
-function mojotitles:players/tag_loop
+function proclamations:players/tag_loop

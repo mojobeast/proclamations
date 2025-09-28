@@ -1,2 +1,2 @@
-function mojotitles:ui/clear_interaction_target
+function proclamations:ui/clear_interaction_target
 dialog clear @s

@@ -1,3 +1,3 @@
-execute if data storage mojotitles:temp InventoryItem{components:{"minecraft:enchantable":{}}} run return fail
+execute if data storage proclamations:temp InventoryItem{components:{"minecraft:enchantable":{}}} run return fail
 
-$item modify entity @s container.$(Slot) mojotitles:make_enchantable
+$item modify entity @s container.$(Slot) proclamations:make_enchantable

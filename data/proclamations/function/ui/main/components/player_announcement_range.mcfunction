@@ -1,4 +1,4 @@
-data modify storage mojotitles:temp WIPDialogAction set value {\
+data modify storage proclamations:temp WIPDialogAction set value {\
     label: [\
       "Player announcement range: ",\
       {\
@@ -10,17 +10,17 @@ data modify storage mojotitles:temp WIPDialogAction set value {\
     tooltip: "Click to edit",\
     action: {\
         type: "run_command",\
-        command: "trigger mojotitles.ui.action set 103"\
+        command: "trigger proclamations.ui.action set 103"\
     }\
 }
 
-data modify storage mojotitles:temp stringify.input \
-  set from storage mojotitles:temp current_marker_data.players[0].distance
+data modify storage proclamations:temp stringify.input \
+  set from storage proclamations:temp current_marker_data.players[0].distance
 
-function mojotitles:utils/stringify with storage mojotitles:temp stringify
+function proclamations:utils/stringify with storage proclamations:temp stringify
 
-data modify storage mojotitles:temp WIPDialogAction.label[1].text \
-  set from storage mojotitles:temp stringified
+data modify storage proclamations:temp WIPDialogAction.label[1].text \
+  set from storage proclamations:temp stringified
 
-data modify storage mojotitles:dialog dialog.actions \
-  append from storage mojotitles:temp WIPDialogAction
+data modify storage proclamations:dialog dialog.actions \
+  append from storage proclamations:temp WIPDialogAction

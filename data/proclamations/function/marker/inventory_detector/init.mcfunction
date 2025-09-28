@@ -1,1 +1,1 @@
-tag @s add mojotitles.inventory_detector
+tag @s add proclamations.inventory_detector

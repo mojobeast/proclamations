@@ -10,7 +10,7 @@
               "predicates": {
                 "minecraft:enchantments": [
                   {
-                    "enchantments": "mojotitles:proclamation"
+                    "enchantments": "proclamations:proclamation"
                   }
                 ]
               }
@@ -21,6 +21,6 @@
     }
   },
   "rewards": {
-    "function": "mojotitles:banner_placement/detected"
+    "function": "proclamations:banner_placement/detected"
   }
 }

@@ -1,6 +1,6 @@
-function mojotitles:ui/get_marker_data
+function proclamations:ui/get_marker_data
 
-data modify storage mojotitles:dialog dialog set value {\
+data modify storage proclamations:dialog dialog set value {\
   type: "minecraft:confirmation",\
   title: "Banner Settings",\
   pause: 0,\
@@ -22,20 +22,20 @@ data modify storage mojotitles:dialog dialog set value {\
   yes: {\
     action: {\
       type: "minecraft:dynamic/run_command",\
-      template: "trigger mojotitles.ui.player_announcement_distance set $(announcement_distance)"\
+      template: "trigger proclamations.ui.player_announcement_distance set $(announcement_distance)"\
     },\
     label: "Confirm"\
   },\
   no: {\
     action: {\
       type: "run_command",\
-      command: "trigger mojotitles.ui.action set 2"\
+      command: "trigger proclamations.ui.action set 2"\
     },\
     label: "Cancel"\
   }\
 }
 
-data modify storage mojotitles:dialog dialog.inputs[0].initial \
-    set from storage mojotitles:temp current_marker_data.players[0].distance
+data modify storage proclamations:dialog dialog.inputs[0].initial \
+    set from storage proclamations:temp current_marker_data.players[0].distance
 
-function mojotitles:ui/show_dialog with storage mojotitles:dialog
+function proclamations:ui/show_dialog with storage proclamations:dialog

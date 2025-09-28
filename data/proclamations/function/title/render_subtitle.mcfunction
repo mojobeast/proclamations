@@ -1,8 +1,8 @@
-data modify storage mojotitles:temp TextComponents \
-    set from entity @e[tag=mojotitles.active_marker,limit=1] data.mojotitles.subtitle_text_components
+data modify storage proclamations:temp TextComponents \
+    set from entity @e[tag=proclamations.active_marker,limit=1] data.proclamations.subtitle_text_components
 
-function mojotitles:text_components/render
+function proclamations:text_components/render
 
-execute if data storage mojotitles:temp RenderedTextComponents[{}] \
-    run title @a[tag=mojotitles.players.sees_title] subtitle \
-        {type:"nbt", source:"storage", storage:"mojotitles:temp", nbt:"RenderedTextComponents", interpret:true}
+execute if data storage proclamations:temp RenderedTextComponents[{}] \
+    run title @a[tag=proclamations.players.sees_title] subtitle \
+        {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}

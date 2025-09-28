@@ -1,3 +1,3 @@
-data modify storage mojotitles:temp Inventory set from entity @a[tag=mojotitles.player_used_compass,limit=1] Inventory
+data modify storage proclamations:temp Inventory set from entity @a[tag=proclamations.player_used_compass,limit=1] Inventory
 
-function mojotitles:compass_naming/inventory_loop with entity @s data.mojotitles.attached_block
+function proclamations:compass_naming/inventory_loop with entity @s data.proclamations.attached_block

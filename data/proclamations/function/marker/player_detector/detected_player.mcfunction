@@ -1,3 +1,3 @@
-tag @s add mojotitles.triggering_player
-function mojotitles:title/show
-tag @s remove mojotitles.triggering_player
+tag @s add proclamations.triggering_player
+function proclamations:title/show
+tag @s remove proclamations.triggering_player

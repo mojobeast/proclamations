@@ -1,1 +1,1 @@
-tag @a[tag=mojotitles.players.sees_title] remove mojotitles.players.sees_title
+tag @a[tag=proclamations.players.sees_title] remove proclamations.players.sees_title

@@ -1,1 +1,1 @@
-$tag $(name) add mojotitles.triggering_player
+$tag $(name) add proclamations.triggering_player

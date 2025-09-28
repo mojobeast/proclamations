@@ -1,7 +1,7 @@
-function mojotitles:data/default_colors
+function proclamations:data/default_colors
 
-function mojotitles:marker/player_detector/load
+function proclamations:marker/player_detector/load
 
-scoreboard objectives add mojotitles.temp dummy
+scoreboard objectives add proclamations.temp dummy
 
-function mojotitles:ui/load
+function proclamations:ui/load

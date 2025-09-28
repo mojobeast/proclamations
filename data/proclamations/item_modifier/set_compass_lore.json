@@ -3,7 +3,7 @@
   "entity": "this",
   "lore": [
     {
-      "nbt": "data.mojotitles.lore[0]",
+      "nbt": "data.proclamations.lore[0]",
       "entity": "@s",
       "source": "entity",
       "type": "nbt"

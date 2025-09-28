@@ -1,1 +1,1 @@
-$scoreboard objectives add mojotitles.player_detector_times.$(id) dummy
+$scoreboard objectives add proclamations.player_detector_times.$(id) dummy

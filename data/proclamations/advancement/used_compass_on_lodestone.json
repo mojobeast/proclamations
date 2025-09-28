@@ -28,6 +28,6 @@
     }
   },
   "rewards": {
-    "function": "mojotitles:compass_naming/used_on_lodestone"
+    "function": "proclamations:compass_naming/used_on_lodestone"
   }
 }

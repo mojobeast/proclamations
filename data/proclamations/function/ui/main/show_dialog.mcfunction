@@ -1,8 +1,8 @@
-function mojotitles:ui/get_marker_data
+function proclamations:ui/get_marker_data
 
-data modify storage mojotitles:temp foo set value "bar"
+data modify storage proclamations:temp foo set value "bar"
 
-data modify storage mojotitles:dialog dialog set value {\
+data modify storage proclamations:dialog dialog set value {\
     type: "minecraft:multi_action",\
     title: "Proclamations",\
     body: {\
@@ -16,7 +16,7 @@ data modify storage mojotitles:dialog dialog set value {\
         label: "Done",\
         action: {\
           type: "run_command",\
-          command: "trigger mojotitles.ui.action set 1"\
+          command: "trigger proclamations.ui.action set 1"\
         }\
     },\
     actions: []\
@@ -24,12 +24,12 @@ data modify storage mojotitles:dialog dialog set value {\
 
 # TODO: Display which triggers the banner is currently configured for in the body
 
-execute if data storage mojotitles:temp current_marker_data.triggers[{type:"mojotitles:player_enters_range"}] \
-    run function mojotitles:ui/main/components/player_detection_range
+execute if data storage proclamations:temp current_marker_data.triggers[{type:"proclamations:player_enters_range"}] \
+    run function proclamations:ui/main/components/player_detection_range
 
-function mojotitles:ui/main/components/triggering_player
+function proclamations:ui/main/components/triggering_player
 
-execute if data storage mojotitles:temp current_marker_data.players[{type:"mojotitles:players_within_range"}] \
-    run function mojotitles:ui/main/components/player_announcement_range
+execute if data storage proclamations:temp current_marker_data.players[{type:"proclamations:players_within_range"}] \
+    run function proclamations:ui/main/components/player_announcement_range
 
-function mojotitles:ui/show_dialog with storage mojotitles:dialog
+function proclamations:ui/show_dialog with storage proclamations:dialog
