@@ -9,6 +9,10 @@ execute if data storage proclamations:temp current_marker_data.players[{type:"pr
 execute if data storage proclamations:temp current_marker_data.players[{type:"proclamations:players_within_range"}] \
   run data modify storage proclamations:temp TargetPlayerSpec set value {type: "proclamations:triggering_player"}
 
+execute if data storage proclamations:temp current_marker_data.triggers[{type:"proclamations:block_state_detected"}] \
+  if data storage proclamations:temp TargetPlayerSpec{type: "proclamations:triggering_player"} \
+  run data modify storage proclamations:temp TargetPlayerSpec set value {type: "proclamations:all_players"}
+
 data modify storage proclamations:temp CurrentPlayerSpec \
   set from storage proclamations:temp current_marker_data.players[0]
 

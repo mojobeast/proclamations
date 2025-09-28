@@ -9,4 +9,7 @@ execute as @s[tag=proclamations.player_detector] run function proclamations:mark
 execute as @s[tag=proclamations.inventory_detector] run function proclamations:marker/inventory_detector/tick \
     with entity @s data.proclamations.attached_block
 
+execute as @s[tag=proclamations.block_state_detector] run function proclamations:marker/block_state_detector/tick \
+    with entity @s data.proclamations.attached_block
+
 tag @s remove proclamations.active_marker

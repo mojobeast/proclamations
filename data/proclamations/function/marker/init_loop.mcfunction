@@ -9,4 +9,7 @@ execute if data storage proclamations:temp Trigger{type:"proclamations:player_en
 execute if data storage proclamations:temp Trigger{type:"proclamations:shulker_enters_inventory"} \
     run function proclamations:marker/inventory_detector/init
 
+execute if data storage proclamations:temp Trigger{type:"proclamations:block_state_detected"} \
+    run function proclamations:marker/block_state_detector/init
+
 function proclamations:marker/init_loop

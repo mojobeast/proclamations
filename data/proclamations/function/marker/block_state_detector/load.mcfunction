@@ -1,0 +1,1 @@
+scoreboard objectives add proclamations.block_state_detector.active dummy

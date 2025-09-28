@@ -1,0 +1,1 @@
+tag @s add proclamations.block_state_detector

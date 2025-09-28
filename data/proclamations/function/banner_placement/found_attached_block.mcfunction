@@ -34,6 +34,9 @@ execute if block ~ ~ ~ minecraft:lodestone \
 execute if block ~ ~ ~ #proclamations:inventory_detectors \
     run function proclamations:banner_placement/attached_block_types/inventory
 
+execute if block ~ ~ ~ #proclamations:block_state_detectors \
+    run function proclamations:banner_placement/attached_block_types/block_state
+
 execute at @s run \
     data modify storage proclamations:temp WIPBanner \
         merge from block ~ ~ ~ components."minecraft:custom_data".proclamations
