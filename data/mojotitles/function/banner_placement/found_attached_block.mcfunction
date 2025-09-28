@@ -11,35 +11,28 @@ execute store result entity @s data.mojotitles.attached_block.z int 1 \
 
 kill @e[tag=mojotitles.attached_block]
 
-execute unless block ~ ~ ~ minecraft:lodestone run return fail
-
-data modify entity @s data.mojotitles.attached_block.type set value "minecraft:lodestone"
-
-data modify storage mojotitles:temp WIPBanner set value {"enabled": true}
-
-data modify storage mojotitles:temp WIPBanner.triggers set value \
-    [{"type": "mojotitles:player_enters_range", "distance": 64, "cooldown_ticks": 100}]
-
-data modify storage mojotitles:temp WIPBanner.players set value \
-    [{"type": "mojotitles:triggering_player"}]
+data modify storage mojotitles:temp WIPBanner set value {\
+    enabled: true,\
+    triggers: [],\
+    players: [],\
+    title_text_components: [],\
+    subtitle_text_components: [],\
+    actionbar_text_components: [],\
+    times: {\
+       fade_in: 10,\
+       stay: 70,\
+       fade_out: 20\
+    }\
+}
 
 execute at @s run function mojotitles:banner_placement/get_default_banner_color
-
 # default_color is used if not overridden by a text component we get from elsewhere (e.g. custom name or lore)
 
-data modify storage mojotitles:temp WIPBanner.title_text_components set value \
-    [{"type": "mojotitles:banner_name"}]
-data modify storage mojotitles:temp WIPBanner.title_text_components[-1].default_color \
-    set from storage mojotitles:temp DefaultBannerColor
+execute if block ~ ~ ~ minecraft:lodestone \
+    run function mojotitles:banner_placement/attached_block_types/lodestone
 
-data modify storage mojotitles:temp WIPBanner.subtitle_text_components set value \
-    [{"type": "mojotitles:banner_lore", "default_color": "white"}]
-
-data modify storage mojotitles:temp WIPBanner.actionbar_text_components set value []
-
-data modify storage mojotitles:temp WIPBanner.times.fade_in set value 10
-data modify storage mojotitles:temp WIPBanner.times.stay set value 70
-data modify storage mojotitles:temp WIPBanner.times.fade_out set value 20
+execute if block ~ ~ ~ #mojotitles:inventory_detectors \
+    run function mojotitles:banner_placement/attached_block_types/inventory
 
 execute at @s run \
     data modify storage mojotitles:temp WIPBanner \
@@ -53,4 +46,4 @@ execute at @s run \
     data modify entity @s data \
         merge from block ~ ~ ~ components."minecraft:custom_data"
 
-function mojotitles:triggers/init
+function mojotitles:marker/init

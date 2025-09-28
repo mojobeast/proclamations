@@ -31,7 +31,7 @@ data modify entity @e[tag=mojotitles.nearest_banner_item,limit=1] \
 
 tag @e[tag=mojotitles.nearest_banner_item] remove mojotitles.nearest_banner_item
 
-execute as @s[tag=mojotitles.player_detector] run function mojotitles:player_detector/kill
+execute as @s[tag=mojotitles.player_detector] run function mojotitles:marker/player_detector/kill
 
 execute on vehicle run kill @s
 
