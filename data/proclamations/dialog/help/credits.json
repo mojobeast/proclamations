@@ -1,0 +1,114 @@
+{
+  "type": "minecraft:notice",
+  "title": "Proclamations Help: Credits and Feedback",
+  "pause": false,
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Proclamations is open source software and welcomes community contributions."
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:player_head",
+        "components": {
+          "minecraft:profile": {
+            "name": "MojoBeast",
+            "properties": [
+              {
+                "name": "textures",
+                "value": "ewogICJ0aW1lc3RhbXAiIDogMTc1OTA5NjU1MTMwOSwKICAicHJvZmlsZUlkIiA6ICJmZWMwMWFmMmY0YjU0Y2IyYTY3YTIxMjg1NzU0MTM2NSIsCiAgInByb2ZpbGVOYW1lIiA6ICJNb2pvQmVhc3QiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGFlNGE0N2ZlNmE0ZmNiY2FmZTdmNWFmNmU0YzUzMjc3MTBhOGZiNDc5MmVhYWNhZGEzNWQ0MDMxZDdjZThlMiIKICAgIH0KICB9Cn0="
+              }
+            ]
+          }
+        }
+      },
+      "description": {
+        "contents": {
+          "text": "Developed by MojoBeast",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "open_url",
+            "url": "https://www.youtube.com/@MojoBeast"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "MojoBeast's YouTube channel"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:lime_shulker_box"
+      },
+      "description": {
+        "contents": {
+          "text": "New Releases",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "open_url",
+            "url": "https://modrinth.com/datapack/proclamations"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "GitHub Issues"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:spider_spawn_egg"
+      },
+      "description": {
+        "contents": {
+          "text": "Bug Reports",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "open_url",
+            "url": "https://github.com/mojobeast/proclamations/issues"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "GitHub Issues"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:command_block"
+      },
+      "description": {
+        "contents": {
+          "text": "Source Code",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "open_url",
+            "url": "https://github.com/mojobeast/proclamations"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "GitHub"
+          }
+        }
+      }
+    }
+  ],
+  "after_action": "close",
+  "action": {
+    "label": "Back",
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "proclamations:help/main"
+    }
+  }
+}

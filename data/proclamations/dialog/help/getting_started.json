@@ -1,0 +1,136 @@
+{
+  "type": "minecraft:notice",
+  "title": "Proclamations Help: Getting Started",
+  "pause": false,
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:enchanting_table"
+      },
+      "description": {
+        "contents": "First, enchant a banner in an enchanting table to give it the Proclamation enchantment.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:anvil"
+      },
+      "description": {
+        "contents": {
+          "text": "Name the banner in an anvil to set the default text that is displayed. If the banner has custom lore, the first line of lore will also be shown as a subtitle.",
+          "underlined": false
+        },
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:yellow_banner"
+      },
+      "description": {
+        "contents": "By default, the color of the title will match the color of the banner. If the banner's name or lore have custom formatting, that will be used instead.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Once you have placed an enchanted banner, you can right-click on it to bring up a menu to configure its properties.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Banners with this enchantment behave differently depending on what block they are attached to:",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:lodestone"
+      },
+      "description": {
+        "contents": {
+          "text": "Player Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/player_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "To show a title when players come within a certain radius of a banner, attach it to a lodestone.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:note_block"
+      },
+      "description": {
+        "contents": {
+          "text": "Redstone Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/redstone_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "To show a title when a redstone block is in a certain state, attach it to a note block, redstone lamp, copper bulb, jukebox or observer.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:hopper"
+      },
+      "description": {
+        "contents": {
+          "text": "Inventory Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/inventory_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "To show a dynamic title based on the items in a shulker box, attach it to any item with an inventory - such as a barrel, dropper, hopper, etc.",
+      "width": 256
+    }
+  ],
+  "after_action": "close",
+  "action": {
+    "label": "Back",
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "proclamations:help/main"
+    }
+  }
+}

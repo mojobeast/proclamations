@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:notice",
+  "title": "Proclamations Help: Redstone Detectors",
+  "pause": false,
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "To show a title when a redstone block is in a certain state, attach it to one of the following blocks:",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:note_block"
+      },
+      "description": {
+        "contents": "Note block: activates when powered.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:observer"
+      },
+      "description": {
+        "contents": "Observer: activates when powered.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:redstone_lamp"
+      },
+      "description": {
+        "contents": "Redstone lamp: activates when lit.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:oxidized_copper_bulb"
+      },
+      "description": {
+        "contents": "Copper bulb: activates when lit.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:jukebox"
+      },
+      "description": {
+        "contents": "Jukebox: activates when a disc is inserted.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "The detector can be configured to show a title to either all players within a certain range, or all online players.",
+      "width": 256
+    }
+  ],
+  "after_action": "close",
+  "action": {
+    "label": "Back",
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "proclamations:help/main"
+    }
+  }
+}

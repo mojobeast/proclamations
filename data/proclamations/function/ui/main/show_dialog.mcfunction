@@ -32,4 +32,6 @@ function proclamations:ui/main/components/triggering_player
 execute if data storage proclamations:temp current_marker_data.players[{type:"proclamations:players_within_range"}] \
     run function proclamations:ui/main/components/player_announcement_range
 
+function proclamations:ui/main/components/help
+
 function proclamations:ui/show_dialog with storage proclamations:dialog
