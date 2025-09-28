@@ -1,1 +1,0 @@
-$tag $(name) add mojotitles.triggering_player

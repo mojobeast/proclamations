@@ -1,0 +1,3 @@
+advancement revoke @s only proclamations:interacted_with_proclamation_banner
+
+function proclamations:ui/main/show_dialog

@@ -1,0 +1,1 @@
+$tag $(name) add proclamations.triggering_player

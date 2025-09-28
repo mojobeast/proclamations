@@ -1,0 +1,1 @@
+tag @s add proclamations.inventory_detector

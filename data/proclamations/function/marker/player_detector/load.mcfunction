@@ -1,0 +1,2 @@
+scoreboard objectives add proclamations.player_detectors dummy
+scoreboard objectives add proclamations.last_seen_by_player_detector dummy

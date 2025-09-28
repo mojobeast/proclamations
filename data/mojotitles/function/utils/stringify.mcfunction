@@ -1,1 +1,0 @@
-$data modify storage mojotitles:temp stringified set value "$(input)"

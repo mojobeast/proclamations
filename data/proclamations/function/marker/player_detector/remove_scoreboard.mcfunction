@@ -1,0 +1,1 @@
+$scoreboard objectives remove proclamations.player_detector_times.$(id)

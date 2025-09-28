@@ -1,1 +1,0 @@
-title @a[tag=mojotitles.players.sees_title] times 10 70 20

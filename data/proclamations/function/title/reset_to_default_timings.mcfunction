@@ -1,0 +1,1 @@
+title @a[tag=proclamations.players.sees_title] times 10 70 20

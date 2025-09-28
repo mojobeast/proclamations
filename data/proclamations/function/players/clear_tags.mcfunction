@@ -1,0 +1,1 @@
+tag @a[tag=proclamations.players.sees_title] remove proclamations.players.sees_title
