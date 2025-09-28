@@ -1,0 +1,121 @@
+{
+  "type": "minecraft:notice",
+  "title": "Proclamations Help",
+  "pause": false,
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "§6Proclamations§r is a datapack for showing on-screen announcements to players in response to various events, and can be used entirely in Survival Mode.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:white_banner"
+      },
+      "description": {
+        "contents": {
+          "text": "Getting Started",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/getting_started"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:lodestone"
+      },
+      "description": {
+        "contents": {
+          "text": "Player Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/player_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:note_block"
+      },
+      "description": {
+        "contents": {
+          "text": "Redstone Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/redstone_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:hopper"
+      },
+      "description": {
+        "contents": {
+          "text": "Inventory Detectors",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/inventory_detectors"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:guster_banner_pattern"
+      },
+      "description": {
+        "contents": {
+          "text": "Credits, Bug Reports, Feedback",
+          "color": "aqua",
+          "underlined": true,
+          "click_event": {
+            "action": "show_dialog",
+            "dialog": "proclamations:help/credits"
+          },
+          "hover_event": {
+            "action": "show_text",
+            "value": "Click for more information"
+          }
+        }
+      }
+    }
+  ],
+  "after_action": "close",
+  "action": {
+    "label": "Close"
+  }
+}

@@ -4,6 +4,9 @@ execute if score @s proclamations.ui.action matches 1 \
 execute if score @s proclamations.ui.action matches 2 \
     run function proclamations:ui/main/show_dialog
 
+execute if score @s proclamations.ui.action matches 3 \
+    run function proclamations:ui/help
+
 execute if score @s proclamations.ui.action matches 101 \
     run function proclamations:ui/player_detection_distance/show_dialog
 

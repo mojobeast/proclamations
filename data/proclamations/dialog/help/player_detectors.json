@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:notice",
+  "title": "Proclamations Help: Player Detectors",
+  "pause": false,
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:lodestone"
+      },
+      "description": {
+        "contents": "To show a title when players come within a certain radius of a banner, attach it to a lodestone.",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "The banner shows a title when a player comes within its detection range. This range can be changed in the configuration menu by right-clicking on the banner.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "By default, the title is shown only to the player who triggered the player detector. This can be changed in the banner's configuration menu to all players who are online, or all players within a certain range.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:compass"
+      },
+      "description": {
+        "contents": "If you use a compass on a lodestone with an enchanted banner attached to it, it will rename the compass's name and lore to match the banner.",
+        "width": 256
+      }
+    }
+  ],
+  "after_action": "close",
+  "action": {
+    "label": "Back",
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "proclamations:help/main"
+    }
+  }
+}
