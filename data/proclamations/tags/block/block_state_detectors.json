@@ -1,0 +1,7 @@
+{
+  "values": [
+    "#proclamations:detect_block_when_lit",
+    "#proclamations:detect_block_when_powered",
+    "minecraft:jukebox"
+  ]
+}

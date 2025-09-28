@@ -1,0 +1,2 @@
+function proclamations:marker/player_detector/load
+function proclamations:marker/block_state_detector/load
