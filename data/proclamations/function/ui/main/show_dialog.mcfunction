@@ -32,6 +32,9 @@ function proclamations:ui/main/components/triggering_player
 execute if data storage proclamations:temp current_marker_data.players[{type:"proclamations:players_within_range"}] \
     run function proclamations:ui/main/components/player_announcement_range
 
+execute if data storage proclamations:temp current_marker_data.triggers[{type:"proclamations:shulker_enters_inventory"}] \
+    run function proclamations:ui/main/components/display_player_heads
+
 function proclamations:ui/main/components/help
 
 function proclamations:ui/show_dialog with storage proclamations:dialog
