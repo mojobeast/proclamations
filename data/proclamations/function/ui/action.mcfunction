@@ -16,4 +16,7 @@ execute if score @s proclamations.ui.action matches 102 \
 execute if score @s proclamations.ui.action matches 103 \
     run function proclamations:ui/player_announcement_distance/show_dialog
 
+execute if score @s proclamations.ui.action matches 104 \
+    run function proclamations:ui/display_player_heads/rotate_value
+
 scoreboard players reset @s proclamations.ui.action
