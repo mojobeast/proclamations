@@ -93,6 +93,49 @@
     {
       "type": "minecraft:plain_message",
       "contents": {
+        "text": "Sprites / Item Textures",
+        "color": "dark_aqua"
+      },
+      "width": 256
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "You can rename any of the following items in an anvil with the name of a sprite or item texture - e.g. 'item/emerald' or 'yourresourcepack:item/yourtexture' - to display that texture as part of the message.",
+      "width": 256
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:painting"
+      },
+      "description": {
+        "contents": "Painting: displayed as a title",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:item_frame"
+      },
+      "description": {
+        "contents": "Item frame: displayed as a subtitle",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:glow_item_frame"
+      },
+      "description": {
+        "contents": "Glow item frame: displayed in the action bar",
+        "width": 256
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
         "text": "Player Targets",
         "color": "dark_aqua"
       },
@@ -120,7 +163,7 @@
         }
       },
       "description": {
-        "contents": "A player is considered to be \"detected\" if a player head matching their profile is found in the shulker box.",
+        "contents": "A player is considered to be \"detected\" if a player head matching their profile is found in the shulker box. Optionally, in the configuration menu you can choose to display player head textures in the title, subtitle or action bar.",
         "width": 256
       }
     }
