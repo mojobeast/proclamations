@@ -10,24 +10,16 @@ data modify storage proclamations:temp NewTextComponent.text \
 
 # If item is wool, use it as a title component, with its color as the default color
 execute if function proclamations:marker/inventory_detector/is_wool \
-    run return \
-    run data modify storage proclamations:temp ContainerTitleTextComponents \
-        append from storage proclamations:temp NewTextComponent
-        
+    run return run function proclamations:marker/inventory_detector/add_text_component_to_title
+
 # If item is carpet, use it as a subtitle component, with its color as the default color
 execute if function proclamations:marker/inventory_detector/is_carpet \
-    run return \
-    run data modify storage proclamations:temp ContainerSubtitleTextComponents \
-        append from storage proclamations:temp NewTextComponent
+    run return run function proclamations:marker/inventory_detector/add_text_component_to_subtitle
 
 # If item is banner, use it as an actionbar component, with its color as the default color
 execute if function proclamations:marker/inventory_detector/is_banner \
-    run return \
-    run data modify storage proclamations:temp ContainerActionbarTextComponents \
-        append from storage proclamations:temp NewTextComponent
+    run return run function proclamations:marker/inventory_detector/add_text_component_to_actionbar
 
-# Otherwise, use the item as a title component
-data modify storage proclamations:temp ContainerTitleTextComponents \
-    append from storage proclamations:temp NewTextComponent
+function proclamations:marker/inventory_detector/add_text_component_to_title
 
 data remove storage proclamations:temp NewTextComponent
