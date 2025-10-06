@@ -7,8 +7,6 @@ data remove storage proclamations:temp DetectedInventoryContents[0]
 execute if data storage proclamations:temp Item.item.components."minecraft:custom_name" \
     run function proclamations:marker/inventory_detector/add_custom_name
 
-# TODO in 1.21.9: if Item has a custom model texture, display the item
-
 # If item is a player head, tag that player as a triggering player
 execute if data storage proclamations:temp Item.item{id:"minecraft:player_head"} \
     run function proclamations:marker/inventory_detector/tag_player_head_owner \
