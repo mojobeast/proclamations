@@ -5,5 +5,18 @@
     "min_format": 71,
     "max_format": 88,
     "supported_formats": { "min_inclusive": 71, "max_inclusive": 88 }
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "pre_1_21_9",
+        "min_format": 71,
+        "max_format": 81,
+        "formats": {
+          "min_inclusive": 71,
+          "max_inclusive": 81
+        }
+      }
+    ]
   }
 }
