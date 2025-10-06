@@ -3,10 +3,6 @@ execute unless data storage proclamations:temp DetectedInventoryContents[0] run 
 data modify storage proclamations:temp Item set from storage proclamations:temp DetectedInventoryContents[0]
 data remove storage proclamations:temp DetectedInventoryContents[0]
 
-# If item is in a stack, display the count of items in the stack
-execute unless data storage proclamations:temp Item.item{count:1} \
-    run function proclamations:marker/inventory_detector/add_count
-
 # If item has custom name, add that custom name to the title
 execute if data storage proclamations:temp Item.item.components."minecraft:custom_name" \
     run function proclamations:marker/inventory_detector/add_custom_name
@@ -17,5 +13,10 @@ execute if data storage proclamations:temp Item.item.components."minecraft:custo
 execute if data storage proclamations:temp Item.item{id:"minecraft:player_head"} \
     run function proclamations:marker/inventory_detector/tag_player_head_owner \
         with storage proclamations:temp Item.item.components."minecraft:profile"
+
+# Otherwise, display the count of items in the stack
+execute unless data storage proclamations:temp Item.item.components."minecraft:custom_name" \
+    unless data storage proclamations:temp Item.item{id:"minecraft:player_head"} \
+    run function proclamations:marker/inventory_detector/add_count
 
 function proclamations:marker/inventory_detector/loop_container_contents
