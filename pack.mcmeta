@@ -1,7 +1,9 @@
 {
   "pack": {
     "description": "§6Proclamations§r by MojoBeast: Add in-game announcements (using the /title command) to your Survival Mode builds.",
-    "pack_format": 81,
+    "pack_format": 88,
+    "min_format": 71,
+    "max_format": 88,
     "supported_formats": { "min_inclusive": 71, "max_inclusive": 88 }
   }
 }
