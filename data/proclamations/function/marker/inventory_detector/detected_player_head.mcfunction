@@ -14,7 +14,7 @@ execute at @s run function proclamations:text_components/render_component/banner
 data modify storage proclamations:temp ContainerTitleTextComponents append from storage proclamations:temp RenderedTextComponent
 
 data modify storage proclamations:temp TextComponent set from entity @s data.proclamations.subtitle_text_components[0]
-execute if data storage proclamations:temp ContainerSubitleTextComponents[0] \
+execute if data storage proclamations:temp ContainerSubtitleTextComponents[0] \
     run data modify storage proclamations:temp ContainerSubtitleTextComponents append value {text: " "}
 execute at @s run function proclamations:text_components/render_component/banner_lore
 execute unless data storage proclamations:temp RenderedTextComponent{text: ""} \
