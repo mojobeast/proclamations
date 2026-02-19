@@ -19,4 +19,7 @@ execute if score @s proclamations.ui.action matches 103 \
 execute if score @s proclamations.ui.action matches 104 \
     run function proclamations:ui/display_player_heads/rotate_value
 
+execute if score @s proclamations.ui.action matches 105 \
+    run function proclamations:ui/display_title_in_chat/rotate_value
+
 scoreboard players reset @s proclamations.ui.action

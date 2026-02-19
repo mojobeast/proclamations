@@ -10,5 +10,6 @@ execute unless data storage proclamations:temp RenderedTextComponents[{}] \
 $title @a[tag=proclamations.players.sees_title] $(subcommand) \
     {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}
 
-tellraw @a[tag=proclamations.players.sees_title] \
-    {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}
+execute if data entity @e[tag=proclamations.active_marker,limit=1] data.proclamations.triggers[{display_title_in_chat: true}] \
+    run tellraw @a[tag=proclamations.players.sees_title] \
+        {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}
