@@ -1,7 +1,5 @@
 function proclamations:ui/get_marker_data
 
-data modify storage proclamations:temp foo set value "bar"
-
 data modify storage proclamations:dialog dialog set value {\
     type: "minecraft:multi_action",\
     title: "Proclamations",\
