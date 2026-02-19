@@ -9,3 +9,6 @@ execute unless data storage proclamations:temp RenderedTextComponents[{}] \
 
 $title @a[tag=proclamations.players.sees_title] $(subcommand) \
     {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}
+
+tellraw @a[tag=proclamations.players.sees_title] \
+    {type:"nbt", source:"storage", storage:"proclamations:temp", nbt:"RenderedTextComponents", interpret:true}
