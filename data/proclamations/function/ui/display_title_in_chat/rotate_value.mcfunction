@@ -1,5 +1,3 @@
-say "display_title_in_chat/rotate_value"
-
 function proclamations:ui/get_marker_data
 
 execute if data storage proclamations:temp current_marker_data.triggers[{display_title_in_chat: false}] \
