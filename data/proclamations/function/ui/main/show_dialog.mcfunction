@@ -1,7 +1,5 @@
 function proclamations:ui/get_marker_data
 
-data modify storage proclamations:temp foo set value "bar"
-
 data modify storage proclamations:dialog dialog set value {\
     type: "minecraft:multi_action",\
     title: "Proclamations",\
@@ -34,6 +32,8 @@ execute if data storage proclamations:temp current_marker_data.players[{type:"pr
 
 execute if data storage proclamations:temp current_marker_data.triggers[{type:"proclamations:shulker_enters_inventory"}] \
     run function proclamations:ui/main/components/display_player_heads
+
+function proclamations:ui/main/components/display_title_in_chat
 
 function proclamations:ui/main/components/help
 
