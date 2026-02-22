@@ -1,9 +1,7 @@
 data modify storage proclamations:temp DetectedInventoryContents set value [{}]
 
-data modify storage proclamations:temp DetectedInventoryContents[0].item set from entity @s \
-     data.proclamations.container_inventory[{id:"minecraft:player_head"}]
-
-function proclamations:marker/inventory_detector/clear_text_components
+data modify storage proclamations:temp DetectedInventoryContents[0].item \
+    set from storage proclamations:temp InventoryItem
 
 function proclamations:marker/inventory_detector/loop_container_contents
 
@@ -19,7 +17,3 @@ execute if data storage proclamations:temp ContainerSubtitleTextComponents[0] \
 execute at @s run function proclamations:text_components/render_component/banner_lore
 execute unless data storage proclamations:temp RenderedTextComponent{text: ""} \
     run data modify storage proclamations:temp ContainerSubtitleTextComponents append from storage proclamations:temp RenderedTextComponent
-
-function proclamations:title/show
-
-tag @a[tag=proclamations.triggering_player] remove proclamations.triggering_player
