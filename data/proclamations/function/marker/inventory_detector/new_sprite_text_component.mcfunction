@@ -1,0 +1,1 @@
+data modify storage proclamations:temp NewTextComponent set value {color: "white", atlas: "minecraft:items"}
