@@ -1,6 +1,6 @@
 execute unless data storage proclamations:temp Item.item{id: "minecraft:item_frame"} run return fail
 
-data modify storage proclamations:temp NewTextComponent set value {color: "white"}
+function proclamations:marker/inventory_detector/new_sprite_text_component
 
 execute store result score #text_component_count proclamations.temp run data get storage proclamations:temp Item.item.count
 
