@@ -1,5 +1,9 @@
 data modify storage proclamations:temp NewTextComponent set value {}
 
+# Set default value as 1, because Item.item.count will not exist for a single item
+data modify storage proclamations:temp stringify.input \
+  set value 1
+
 data modify storage proclamations:temp stringify.input \
   set from storage proclamations:temp Item.item.count
 
